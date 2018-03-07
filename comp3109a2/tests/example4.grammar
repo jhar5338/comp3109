@@ -1,7 +1,0 @@
-S ::= A B C D E
-A ::= epsilon
-A ::= a
-B ::= epsilon
-C ::= epsilon
-D ::= epsilon
-E ::= e

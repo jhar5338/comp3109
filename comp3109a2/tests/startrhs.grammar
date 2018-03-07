@@ -1,5 +1,0 @@
-S ::= A B S D B
-A ::= a
-A ::= epsilon
-B ::= b
-D ::= d

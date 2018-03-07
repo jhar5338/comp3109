@@ -1,7 +1,0 @@
-S ::= A a
-A ::= B D
-B ::= b
-D ::= d
-B ::= epsilon
-D ::= epsilon
-
