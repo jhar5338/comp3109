@@ -1,0 +1,9 @@
+S ::= A T e
+T ::= T B b
+T ::= epsilon
+A ::= a
+A ::= epsilon
+B ::= C d
+C ::= c
+C ::= epsilon
+

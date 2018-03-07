@@ -1,0 +1,151 @@
++++++contains_epsilon.grammar+++++
+First:
+   S -> a epsilon
+   A -> epsilon a
+   B -> epsilon
+   C -> epsilon
+   D -> epsilon
+   E -> epsilon
+Follow:
+   A -> $
+   S -> $
+   B -> $
+   C -> $
+   D -> $
+   E -> $
++++++ebnf.grammar+++++
+First:
+   S -> a {
+   A -> epsilon a
+   B -> [
+Follow:
+   S -> $
+   A -> {
+   B -> b
++++++example1.grammar+++++
+First:
+   S -> a epsilon c
+   B -> epsilon
+   A -> d
+Follow:
+   A -> $ d
+   S -> $
+   B -> d $ c
++++++example2.grammar+++++
+First:
+   S -> a c d e
+   A -> a epsilon
+   T -> c d epsilon
+   B -> c d
+   C -> c epsilon
+Follow:
+   S -> $
+   T -> e c d
+   A -> c d e
+   B -> b
+   C -> d
++++++example3.grammar+++++
+First:
+   S -> a b
+   A -> epsilon a
+Follow:
+   S -> $
+   A -> b $
++++++example4.grammar+++++
+First:
+   S -> a e
+   A -> epsilon a
+   B -> epsilon
+   C -> epsilon
+   D -> epsilon
+   E -> e
+Follow:
+   A -> e
+   E -> $
+   S -> $
+   B -> e
+   C -> e
+   D -> e
++++++example5.grammar+++++
+First:
+   S -> a b c epsilon
+   A -> a b c epsilon
+   B -> epsilon b
+   C -> epsilon c
+Follow:
+   A -> b c $
+   S -> $
+   B -> c $ b
+   C -> $ b c
++++++example6.grammar+++++
+First:
+   S -> a b c
+   A -> a b c
+   B -> epsilon b
+   C -> c
+Follow:
+   A -> b c
+   C -> $ b c
+   S -> $
+   B -> c
++++++example7.grammar+++++
+First:
+   S -> b d a
+   A -> b d epsilon
+   B -> b epsilon
+   D -> d epsilon
+Follow:
+   S -> $
+   B -> d a
+   A -> a
+   D -> a
++++++example.grammar+++++
+First:
+   S -> a b
+   A -> a epsilon
+   B -> b
+Follow:
+   A -> b $
+   S -> $
+   B -> b a $
++++++nested.grammar+++++
+First:
+   S -> a {
+   A -> epsilon a
+   B -> [
+Follow:
+   S -> $
+   A -> {
+   B -> [
++++++notll1.grammar+++++
+First:
+   S -> a b epsilon
+   A -> a epsilon
+   B -> b epsilon
+Follow:
+   A -> b a $
+   S -> $
+   B -> b a $
++++++startrhs.grammar+++++
+First:
+   S -> a b
+   A -> a epsilon
+   B -> b
+   D -> d
+Follow:
+   A -> b
+   B -> a b $ d
+   S -> $ d
+   D -> b
++++++uneven2.grammar+++++
++++++uneven3.grammar+++++
++++++uneven4.grammar+++++
+First:
+   S -> A
+Follow:
+   S -> $
++++++uneven.grammar+++++
+First:
+   S -> A
+Follow:
+   S -> $
