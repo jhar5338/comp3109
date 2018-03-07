@@ -1,0 +1,76 @@
++++++contains_epsilon.grammar+++++
+R[S, a] = 0
+R[A, $] = 1
+R[A, a] = 2
+R[B, $] = 3
+R[C, $] = 4
+R[D, $] = 5
+R[E, $] = 6
++++++ebnf.grammar+++++
+R[S, a] = 0
+R[S, {] = 0
+R[A, {] = 1
+R[A, a] = 2
+R[B, [] = 3
++++++example1.grammar+++++
+Grammar is not LL(1)!
++++++example2.grammar+++++
+Grammar is not LL(1)!
++++++example3.grammar+++++
+R[S, a] = 0
+R[S, b] = 0
+R[A, b] = 1
+R[A, $] = 1
+R[A, a] = 2
++++++example4.grammar+++++
+R[S, a] = 0
+R[S, e] = 0
+R[A, e] = 1
+R[A, a] = 2
+R[B, e] = 3
+R[C, e] = 4
+R[D, e] = 5
+R[E, e] = 6
++++++example5.grammar+++++
+Grammar is not LL(1)!
++++++example6.grammar+++++
+Grammar is not LL(1)!
++++++example7.grammar+++++
+R[S, b] = 0
+R[S, d] = 0
+R[S, a] = 0
+R[A, b] = 1
+R[A, d] = 1
+R[B, b] = 2
+R[B, d] = 3
+R[B, a] = 3
+R[D, d] = 4
+R[D, a] = 5
++++++example.grammar+++++
+R[S, a] = 0
+R[S, b] = 0
+R[A, a] = 1
+R[A, b] = 2
+R[A, $] = 2
+R[B, b] = 3
++++++nested.grammar+++++
+R[S, a] = 0
+R[S, {] = 0
+R[A, {] = 1
+R[A, a] = 2
+R[B, [] = 3
++++++notll1.grammar+++++
+Grammar is not LL(1)!
++++++startrhs.grammar+++++
+R[S, a] = 0
+R[S, b] = 0
+R[A, a] = 1
+R[A, b] = 2
+R[B, b] = 3
+R[D, d] = 4
++++++uneven2.grammar+++++
++++++uneven3.grammar+++++
++++++uneven4.grammar+++++
+R[S, A] = 0
++++++uneven.grammar+++++
+R[S, A] = 0

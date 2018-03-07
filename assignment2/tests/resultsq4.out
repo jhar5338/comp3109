@@ -1,0 +1,105 @@
++++++contains_epsilon.grammar+++++
+S ::= A B C D E
+A ::= epsilon
+A ::= a
+B ::= epsilon
+C ::= epsilon
+D ::= epsilon
+E ::= epsilon
++++++ebnf.grammar+++++
+S ::= A C e
+A ::= a
+A ::= epsilon
+B ::= D d
+C ::= C B b
+C ::= epsilon
+D ::= c
+D ::= epsilon
++++++example1.grammar+++++
+S ::= a B A
+S ::= B B
+S ::= B c
+A ::= A d a
+A ::= d
+B ::= epsilon
++++++example2.grammar+++++
+S ::= A T e
+T ::= T B b
+T ::= epsilon
+A ::= a
+A ::= epsilon
+B ::= C d
+C ::= c
+C ::= epsilon
++++++example3.grammar+++++
+S ::= A b A b A
+A ::= epsilon
+A ::= a
++++++example4.grammar+++++
+S ::= A B C D E
+A ::= epsilon
+A ::= a
+B ::= epsilon
+C ::= epsilon
+D ::= epsilon
+E ::= e
++++++example5.grammar+++++
+S ::= A B C
+A ::= a
+A ::= B C
+A ::= A b
+B ::= epsilon
+B ::= b C
+C ::= epsilon
+C ::= c
++++++example6.grammar+++++
+S ::= A B C
+A ::= a
+A ::= B C
+A ::= A b
+B ::= epsilon
+B ::= b C
+C ::= c
++++++example7.grammar+++++
+S ::= A a
+A ::= B D
+B ::= b
+B ::= epsilon
+D ::= d
+D ::= epsilon
++++++example.grammar+++++
+S ::= A B B A
+A ::= a
+A ::= epsilon
+B ::= b
++++++nested.grammar+++++
+S ::= A D e
+A ::= a
+A ::= epsilon
+B ::= E d
+C ::= b
+C ::= epsilon
+D ::= D B C
+D ::= epsilon
+E ::= c
+E ::= epsilon
++++++notll1.grammar+++++
+S ::= A B B A
+A ::= a
+A ::= epsilon
+B ::= b
+B ::= epsilon
++++++startrhs.grammar+++++
+S ::= A B S D B
+A ::= a
+A ::= epsilon
+B ::= b
+D ::= d
++++++uneven2.grammar+++++
+Error in syntax
++++++uneven3.grammar+++++
+Error in syntax
++++++uneven4.grammar+++++
+Error in syntax
++++++uneven.grammar+++++
+Error in syntax
